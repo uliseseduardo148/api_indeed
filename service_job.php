@@ -15,9 +15,7 @@ class ServiceJob
         # The final conversion of XML to JSON is done by calling the json_encode() function.
         $resultJson = json_encode($resultXml);
         # Pass the JSON to array
-        $jobs = json_decode($resultJson, true);
-
-        return $jobs;
+        return json_decode($resultJson, true);
     }
 
     /**
